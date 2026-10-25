@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 3. Team registration</title>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/task3.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="topnav" aria-label="Tasks">
+      <a href="index.html">Home</a>
+      <a href="task1.html">Task 1</a>
+      <a href="task2.html">Task 2</a>
+      <a href="task3.html" aria-current="page">Task 3</a>
+    </nav>
+
+    <section class="card">
+      <header class="card__head">
+        <h1 class="card__title">Team registration</h1>
+        <p class="card__sub">Register a hackathon team. The preview changes while you type.</p>
+      </header>
+
+      <div class="card__body">
+        <div class="tk-layout">
+          <form class="tk-form" id="team-form" action="#" method="get">
+            <div class="tk-summary" id="error-summary" role="alert" tabindex="-1" hidden></div>
+
+            <div>
+              <label class="field__label" for="teamName">Team name *</label>
+              <input class="field__control" id="teamName" name="teamName" aria-describedby="error-teamName" type="text" minlength="3" maxlength="24" autocomplete="off" required>
+              <p class="field__error" id="error-teamName" hidden></p>
+            </div>
+            <div>
+              <label class="field__label" for="track">Track *</label>
+              <select class="field__control" id="track" name="track" required aria-describedby="error-track"></select>
+              <p class="field__error" id="error-track" hidden></p>
+            </div>
+            <div>
+              <label class="field__label" for="size">Team size *</label>
+              <select class="field__control" id="size" name="size" required aria-describedby="error-size"><option value="">Choose size…</option><option value="2">2 people</option><option value="3">3 people</option><option value="4">4 people</option></select>
+              <p class="field__error" id="error-size" hidden></p>
+            </div>
+            <div>
+              <label class="field__label" for="captainName">Captain full name *</label>
+              <input class="field__control" id="captainName" name="captainName" aria-describedby="error-captainName" type="text" maxlength="40" autocomplete="name" required>
+              <p class="field__error" id="error-captainName" hidden></p>
+            </div>
+            <div>
+              <label class="field__label" for="captainEmail">Captain email *</label>
+              <input class="field__control" id="captainEmail" name="captainEmail" aria-describedby="error-captainEmail" type="email" autocomplete="email" required>
+              <p class="field__error" id="error-captainEmail" hidden></p>
+            </div>
+            <div id="wrap-member2" hidden>
+              <label class="field__label" for="member2">Member 2 email *</label>
+              <input class="field__control" id="member2" name="member2" aria-describedby="error-member2" type="email" autocomplete="off" required>
+              <p class="field__error" id="error-member2" hidden></p>
+            </div>
+            <div id="wrap-member3" hidden>
+              <label class="field__label" for="member3">Member 3 email *</label>
+              <input class="field__control" id="member3" name="member3" aria-describedby="error-member3" type="email" autocomplete="off" required>
+              <p class="field__error" id="error-member3" hidden></p>
+            </div>
+            <div id="wrap-member4" hidden>
+              <label class="field__label" for="member4">Member 4 email *</label>
+              <input class="field__control" id="member4" name="member4" aria-describedby="error-member4" type="email" autocomplete="off" required>
+              <p class="field__error" id="error-member4" hidden></p>
+            </div>
+
+            <button type="submit" class="btn btn--primary">Register team</button>
+          </form>
+
+          <aside class="tk-preview" aria-label="Team preview">
+            <h2 class="tk-preview__title">Team preview</h2>
+            <dl class="tk-list" id="preview"></dl>
+            <p class="tk-total" id="preview-seats"></p>
+          </aside>
+        </div>
+
+        <div class="tk-result" id="result" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

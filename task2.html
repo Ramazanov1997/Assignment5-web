@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 2. Camp Workshop</title>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/task2.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="topnav" aria-label="Tasks">
+      <a href="index.html">Home</a>
+      <a href="task1.html">Task 1</a>
+      <a href="task2.html" aria-current="page">Task 2</a>
+      <a href="task3.html">Task 3</a>
+    </nav>
+
+    <section class="card">
+      <header class="card__head">
+        <h1 class="card__title">Camp Workshop</h1>
+        <p class="card__sub">Gather materials, craft things and build up the camp. The camp holds at most 12 of each item.</p>
+      </header>
+
+      <div class="card__body">
+        <div class="kb-tools">
+          <div>
+            <label class="field__label" for="search">Search by name</label>
+            <input class="field__control" type="search" id="search" autocomplete="off">
+          </div>
+          <div>
+            <label class="field__label" for="category">Category</label>
+            <select class="field__control" id="category">
+              <option value="all">All items</option>
+              <option value="material">Materials</option>
+              <option value="product">Products</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="msg" id="message" role="status" aria-live="polite"></p>
+
+        <div id="workshop"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

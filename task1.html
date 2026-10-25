@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 1. Word Guess</title>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/task1.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="topnav" aria-label="Tasks">
+      <a href="index.html">Home</a>
+      <a href="task1.html" aria-current="page">Task 1</a>
+      <a href="task2.html">Task 2</a>
+      <a href="task3.html">Task 3</a>
+    </nav>
+
+    <section class="card">
+      <header class="card__head">
+        <h1 class="card__title">Word Guess</h1>
+        <p class="card__sub">Guess the web-development word letter by letter. A hint costs one life.</p>
+      </header>
+
+      <div class="card__body">
+        <ul class="hl-stats">
+          <li>Lives: <span id="lives" class="hl-lives"></span></li>
+          <li>Used letters: <span id="used"></span></li>
+        </ul>
+
+        <p class="wg-word" id="word" aria-label="Word to guess"></p>
+        <p class="wg-hint" id="hint-text" hidden></p>
+
+        <form class="wg-form" id="letter-form" action="#" novalidate>
+          <div class="wg-form__field">
+            <label class="field__label" for="letter-input">Type one letter</label>
+            <input class="field__control" type="text" id="letter-input" autocomplete="off">
+          </div>
+          <button type="submit" class="btn btn--primary">Guess</button>
+        </form>
+
+        <div class="wg-keys" id="keys" aria-label="Letter keyboard"></div>
+
+        <p class="msg" id="message" role="status" aria-live="polite"></p>
+
+        <div class="hl-actions">
+          <button type="button" class="btn" id="btn-hint">Hint (−1 life)</button>
+          <button type="button" class="btn btn--primary" id="btn-new">New word</button>
+        </div>
+
+        <h2 class="field__label hl-history__title">Last moves</h2>
+        <ul class="hl-history" id="log"></ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
